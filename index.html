@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A read-only macOS app for checking Time Machine status, browsing snapshots, and comparing changes." />
+    <meta name="theme-color" content="#6bc7bb" />
+    <link id="site-favicon" rel="icon" href="icon-light.png" type="image/png" />
+    <link rel="apple-touch-icon" href="icon-light.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>TimeVault | Time Machine, clearly</title>
+  </head>
+  <body>
+    <div class="header-wrap">
+    <header class="site-header shell">
+      <a class="brand" href="#top" aria-label="TimeVault home">
+        <img src="icon-light.png" width="36" height="36" alt="" data-theme-icon />
+        <span>TimeVault</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#compare">Compare snapshots</a>
+        <a href="https://github.com/MinimackStudios/TimeVault" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch color theme" data-theme-toggle>
+          <span aria-hidden="true">◐</span>
+          <span>Theme</span>
+        </button>
+        <a class="button button-small" href="https://github.com/MinimackStudios/TimeVault/releases/latest/download/TimeVault.dmg">Download</a>
+      </div>
+    </header>
+    </div>
+
+    <main id="top">
+      <section class="hero shell">
+        <div class="hero-copy reveal">
+          <p class="kicker"><span></span> Read-only Time Machine visibility</p>
+          <h1>A clearer view of<br />your <em>backups.</em></h1>
+          <p class="hero-lede">Check backup status, browse snapshots, and compare changes without modifying your Time Machine data.</p>
+          <div class="hero-actions">
+            <a class="button" href="https://github.com/MinimackStudios/TimeVault/releases/latest/download/TimeVault.dmg">Download TimeVault <b aria-hidden="true">↗</b></a>
+            <a class="quiet-link" href="#features">See what it does <b aria-hidden="true">↓</b></a>
+          </div>
+          <p class="hero-note">Built for macOS 13 and later</p>
+        </div>
+
+        <div class="hero-panel reveal" aria-label="TimeVault dashboard preview">
+          <div class="window-toolbar">
+            <span class="traffic-lights"><i></i><i></i><i></i></span>
+            <span>TimeVault</span>
+            <small>Updated just now</small>
+          </div>
+          <div class="dashboard">
+            <aside>
+              <div class="side-brand"><img src="icon-light.png" width="22" height="22" alt="" data-theme-icon /><strong>TimeVault</strong></div>
+              <a class="active" href="#top"><img class="symbol-image sidebar-symbol on-accent" src="assets/symbols/rectangle-3-group.png" alt="" />Dashboard</a>
+              <p>BACKUP DRIVES</p>
+              <a href="#compare"><img class="symbol-image sidebar-symbol muted-symbol" src="assets/symbols/externaldrive.png" alt="" />Time Machine</a>
+              <a href="#compare"><img class="symbol-image sidebar-symbol muted-symbol" src="assets/symbols/clock-arrow-circlepath.png" alt="" />Snapshots</a>
+            </aside>
+            <div class="dashboard-main">
+              <div class="dashboard-heading"><div><h2>TimeVault</h2><p>Your Time Machine protection at a glance</p></div><span><img class="symbol-image inline-symbol blue-symbol" src="assets/symbols/arrow-clockwise.png" alt="" /> Refresh</span></div>
+              <div class="status-card"><div class="status-check"><img class="symbol-image status-symbol on-accent" src="assets/symbols/checkmark-circle-fill.png" alt="" /></div><div><span>TIME MACHINE STATUS</span><strong>Backup idle</strong><small>Last backup: Aug 3, 2026 at 10:03 AM</small></div><a href="#compare"><img class="symbol-image inline-symbol on-accent" src="assets/symbols/clock-arrow-circlepath.png" alt="" /> Browse snapshots</a></div>
+              <div class="metrics">
+                <article><span class="metric-icon local"><img class="symbol-image blue-symbol" src="assets/symbols/clock-arrow-circlepath.png" alt="" /></span><p>Local snapshots</p><strong>12</strong><small>On Macintosh HD</small></article>
+                <article><span class="metric-icon startup"><img class="symbol-image purple-symbol" src="assets/symbols/internaldrive.png" alt="" /></span><p>Startup disk</p><strong>79.39 GB</strong><small>131.55 GB total capacity</small></article>
+                <article><span class="metric-icon backup"><img class="symbol-image orange-symbol" src="assets/symbols/externaldrive-fill.png" alt="" /></span><p>Backup drives</p><strong>1</strong><small>Connected and ready</small></article>
+              </div>
+              <div class="dashboard-lower">
+                <article><div class="card-label"><span class="label-with-symbol"><img class="symbol-image label-symbol" src="assets/symbols/internaldrive.png" alt="" />Startup disk</span><span>79.39 GB available</span></div><strong>Macintosh HD</strong><div class="storage-bar"><i></i></div><small>52.15 GB used</small></article>
+                <article><div class="card-label"><span class="label-with-symbol"><img class="symbol-image label-symbol" src="assets/symbols/clock-arrow-circlepath.png" alt="" />Snapshot storage</span></div><strong>12 local snapshots</strong><p>Available to inspect on this Mac.</p><a href="#compare">View local snapshots →</a></article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="principles shell reveal" aria-label="TimeVault principles">
+        <p>Built around the things that matter</p>
+        <div><span><i class="dot"></i>Read-only inspection</span><span><i class="dot"></i>Local and mounted snapshots</span><span><i class="dot"></i>Clear status reporting</span></div>
+      </section>
+
+      <section class="features shell" id="features">
+        <div class="section-heading reveal">
+          <p class="kicker"><span></span> What TimeVault does</p>
+          <h2>Less hunting.<br /><em>More context.</em></h2>
+          <p>TimeVault keeps the important parts of Time Machine close at hand, in one native macOS interface.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card reveal"><span class="feature-index">01</span><p class="feature-label">Backup status</p><h3>See the current state.</h3><p>Quickly tell whether a backup drive is connected, a backup is idle, or access needs attention.</p></article>
+          <article class="feature-card reveal"><span class="feature-index">02</span><p class="feature-label">Snapshot browser</p><h3>Browse with your drive in context.</h3><p>Explore local and mounted snapshots while keeping the active drive and sort order visible.</p></article>
+          <article class="feature-card reveal"><span class="feature-index">03</span><p class="feature-label">Snapshot comparison</p><h3>See what changed between two points.</h3><p>Choose an older and newer snapshot to review additions, removals, modifications, and metadata changes.</p></article>
+        </div>
+      </section>
+
+      <section class="compare shell" id="compare">
+        <div class="compare-copy reveal">
+          <p class="kicker"><span></span> Snapshot comparison</p>
+          <h2>Choose two points.<br /><em>Review the difference.</em></h2>
+          <p>TimeVault gives the older and newer snapshots clear roles, then lists the changes in between. It does not restore, delete, or alter your backups.</p>
+          <a class="quiet-link" href="https://github.com/MinimackStudios/TimeVault" target="_blank" rel="noreferrer">View the project on GitHub <b aria-hidden="true">↗</b></a>
+        </div>
+        <div class="comparison-card reveal">
+          <div class="comparison-title"><strong>Compare backup snapshots</strong><span>Ready to inspect</span></div>
+          <div class="snapshot-pair"><article><p>OLDER SNAPSHOT</p><strong>Jul 30, 2026 at 11:37 AM</strong><small>2026-07-30-113724.backup</small></article><b aria-hidden="true">→</b><article><p>NEWER SNAPSHOT</p><strong>Jul 30, 2026 at 12:58 AM</strong><small>2026-07-30-005826.backup</small></article></div>
+          <div class="change-list"><div><i class="added"></i><strong>Added</strong><span>Documents/Plans</span><b>12 files</b></div><div><i class="changed"></i><strong>Modified</strong><span>Projects/TimeVault</span><b>3.2 MB</b></div><div><i class="removed"></i><strong>Removed</strong><span>Downloads/Archive</span><b>8 files</b></div></div>
+        </div>
+      </section>
+
+      <section class="read-only shell reveal">
+        <div class="read-only-mark"><img src="icon-light.png" width="112" height="112" alt="" data-theme-icon /></div>
+        <div><p class="kicker"><span></span> Read-only by design</p><h2>Nothing changes<br />without <em>you.</em></h2></div>
+        <p>TimeVault observes backup status and snapshots. It does not delete backups, restore files, or perform maintenance actions on your behalf.</p>
+      </section>
+
+      <section class="cta shell reveal">
+        <p class="kicker"><span></span> TimeVault for macOS</p>
+        <h2>Understand your<br /><em>Time Machine.</em></h2>
+        <p>Download the latest version, or view the source and release notes on GitHub.</p>
+        <div class="hero-actions"><a class="button button-light" href="https://github.com/MinimackStudios/TimeVault/releases/latest/download/TimeVault.dmg">Download TimeVault <b aria-hidden="true">↗</b></a><a class="button button-outline github-button" href="https://github.com/MinimackStudios/TimeVault" target="_blank" rel="noreferrer"><img src="assets/github-mark.svg" width="16" height="16" alt="" />View on GitHub <b aria-hidden="true">↗</b></a></div>
+      </section>
+    </main>
+
+    <footer class="site-footer shell"><a class="brand" href="#top"><img src="icon-light.png" width="30" height="30" alt="" data-theme-icon /><span>TimeVault</span></a><p>Read-only Time Machine visibility for macOS.</p><div><a href="https://github.com/MinimackStudios/TimeVault" target="_blank" rel="noreferrer">GitHub</a><a href="https://github.com/MinimackStudios/TimeVault/releases/latest" target="_blank" rel="noreferrer">Releases</a></div></footer>
+  </body>
+</html>
